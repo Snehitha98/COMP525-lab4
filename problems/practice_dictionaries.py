@@ -12,7 +12,7 @@ class Practice(object):
     Illustrate methods that transform an input dictionary into some output
     """
 
-    def parse_seasons(self, season_dict):
+    def parse_seasons(self, input1):
         """
         Create a string with info from season_dict
         season_dict: dictionary
@@ -21,7 +21,11 @@ class Practice(object):
         Returns: string with season names and descriptions and no spaces or
             other characters in between
         """
-        pass
+        string = ""
+        for season_names in input1:
+            string = string + season_names + input1[season_names]
+        result = string.replace(" ","")
+        return result
 
     def update_inventory(self, inventory_dict, quantity_added):
         """
