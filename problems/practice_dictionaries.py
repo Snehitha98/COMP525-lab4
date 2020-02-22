@@ -1,9 +1,7 @@
 """
 practice_dictionaries.py
-Get familiar with dictionaries
-Mihaela Sabin
-Created March 20, 2019
-Updated October 16, 2019; February 19, 2020
+Snehitha Mamidi
+February 22, 2020
 """
 
 
@@ -45,6 +43,13 @@ if __name__ == '__main__':
         'summer': 'hot',
         'fall': 'just right',
         'winter': 'cold'
+    }
+    result = p.parse_seasons(input1)
+    print(f'parse_seasons({input1}) returns {result}')
+# Testing for one season
+    p = Practice()
+    input1 = {
+        'Rainy': 'Full of water'
     }
     result = p.parse_seasons(input1)
     print(f'parse_seasons({input1}) returns {result}')
