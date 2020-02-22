@@ -27,14 +27,17 @@ class Practice(object):
 
     def update_inventory(self, inventory_dict, quantity_added):
         """
-        Returns new dictionary with quanties for each itmem in inveentory_dict
+        Returns new dictionary with quanties for each itmem in inventory_dict
             increased by quantity-added
         inventory_dict: dictionary
             keys: strings - inventory item names
             values: int - inventory quantity of item
-        Returns: dictionry
+        Returns: dictionary
         """
-        pass
+        for quantities in inventory_dict:
+            inventory_dict[quantities] += quantity_added
+        new_dictionary = inventory_dict
+        return new_dictionary
 
 if __name__ == '__main__':
     p = Practice()
@@ -53,3 +56,12 @@ if __name__ == '__main__':
     }
     result = p.parse_seasons(input1)
     print(f'parse_seasons({input1}) returns {result}')
+
+    
+# Testing update_inventory()
+    p = Practice()
+    inventory_dict = {'books': 10,'pencils': 15,'erasers': 20,'pens': 25}
+    quantity_added = 5
+    result = p.update_inventory(inventory_dict,quantity_added)
+    inventory_dict = {'books': 10,'pencils': 15,'erasers': 20,'pens': 25}
+    print(f'update_inventory({inventory_dict},{quantity_added}) returns {result}')
