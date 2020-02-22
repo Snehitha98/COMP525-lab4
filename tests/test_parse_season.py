@@ -1,7 +1,7 @@
 """
 test_parse_season.py
-Mihaela
-Created March 20, 2019. Updated October 15, 2019
+Snehitha Mamidi
+February 22, 2020
 """
 
 import unittest
@@ -32,6 +32,14 @@ class TestParseSeasons(unittest.TestCase):
         expected_result = 'springwarmsummerhotfalljustrightwintercold'
         self.assertEqual(actual_result, expected_result)
 
+    def test_one_season(self):
+        """
+        Test case for one season description
+        """
+        input1 = {'Rainy': 'Full of water'}
+        actual_result = self.p.parse_seasons(input1)
+        expected_result = 'RainyFullofwater'
+        self.assertEqual(actual_result, expected_result)
 
 if __name__ == '__main__':
     unittest.main()
