@@ -19,12 +19,22 @@ class TestUpdateInventory(unittest.TestCase):
 
     def test_quantities_added(self):
         """
-        Test case with short season descriptions
+        Test case with short descriptions
         """
         inventory_dict = {'books': 10,'pencils': 15,'erasers': 20,'pens': 25}
         quantity_added = 5
         actual_result = self.p.update_inventory(inventory_dict,quantity_added)
         expected_result = {'books': 15,'pencils': 20,'erasers': 25,'pens': 30}
+        self.assertDictEqual(actual_result, expected_result)
+
+    def test_simple_inventory(self):
+        """
+        Test case with short descriptions
+        """
+        inventory_dict = {'milkybar': 3,'kitkat': 17}
+        quantity_added = 7
+        actual_result = self.p.update_inventory(inventory_dict,quantity_added)
+        expected_result = {'milkybar': 10,'kitkat': 24}
         self.assertDictEqual(actual_result, expected_result)
 
 if __name__ == '__main__':
