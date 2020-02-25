@@ -57,11 +57,19 @@ if __name__ == '__main__':
     result = p.parse_seasons(input1)
     print(f'parse_seasons({input1}) returns {result}')
 
-    
+
 # Testing update_inventory()
     p = Practice()
     inventory_dict = {'books': 10,'pencils': 15,'erasers': 20,'pens': 25}
     quantity_added = 5
     result = p.update_inventory(inventory_dict,quantity_added)
     inventory_dict = {'books': 10,'pencils': 15,'erasers': 20,'pens': 25}
+    print(f'update_inventory({inventory_dict},{quantity_added}) returns {result}')
+
+# Testcase for update_inventory()
+    p = Practice()
+    inventory_dict = {'milkybar': 3,'kitkat': 17}
+    quantity_added = 7
+    result = p.update_inventory(inventory_dict,quantity_added)
+    inventory_dict = {'milkybar': 3,'kitkat': 17}
     print(f'update_inventory({inventory_dict},{quantity_added}) returns {result}')
